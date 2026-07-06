@@ -1,0 +1,128 @@
+{
+ "title": "PL Operating-Guide Audit",
+ "summary": {
+  "FORCED": 4,
+  "EMPIRICAL": 1,
+  "CONDITIONAL": 3,
+  "STIPULATED": 1,
+  "UNPAID": 4
+ },
+ "failed": [],
+ "composite_tier": "STIPULATED",
+ "chain_len": 5,
+ "suite_sha256_16": "318db3aa0606a917",
+ "claims": [
+  {
+   "tier": "FORCED",
+   "ok": true,
+   "statement": "LNC, LEM, DN hold in {0,1} by COMPLETE enumeration (every value tested)"
+  },
+  {
+   "tier": "FORCED",
+   "ok": true,
+   "statement": "Same laws DISPROVED in {0,1/2,1} by one counterexample (LNC,LEM fail at 1/2; DN holds; fixed point = 1/2)"
+  },
+  {
+   "tier": "EMPIRICAL",
+   "ok": true,
+   "statement": "d/dx[x^2 sin x] by AND load rule matches analytic to <1e-10 (err=0.0e+00)"
+  },
+  {
+   "tier": "CONDITIONAL",
+   "ok": true,
+   "statement": "Within stipulated O (node-welfare): HARM is strictly dominated at every horizon AND never recoups (monotone non-increasing O)"
+  },
+  {
+   "tier": "CONDITIONAL",
+   "ok": true,
+   "statement": "FALSIFIER EXHIBITED: under O'=order-stability, suppression is NOT dominated (O' rises). Domination is O-relative -> tier is CONDITIONAL-on-O, never FORCED-period"
+  },
+  {
+   "tier": "STIPULATED",
+   "ok": true,
+   "statement": "O = the good is a STIPULATION. No code closes is->ought. Declared, not derived"
+  },
+  {
+   "tier": "CONDITIONAL",
+   "ok": true,
+   "statement": "\u00a72 DOWN-TIERED: 'predatory-O self-deletes' is FALSE for a persisting regime (12/12 nodes survive 200 steps). O's non-arbitrariness is CONDITIONAL, not shown"
+  },
+  {
+   "tier": "FORCED",
+   "ok": true,
+   "statement": "Weakest-link holds and the guide reports its OWN composite tier = STIPULATED (safety FORCED-within-O, but O stipulated -> the guide is a map, not a theorem)"
+  },
+  {
+   "tier": "FORCED",
+   "ok": true,
+   "statement": "Chain of 5 sealed sections replays intact; mutating one section breaks replay at that link"
+  },
+  {
+   "tier": "UNPAID",
+   "ok": false,
+   "statement": "Not claimed: that this raises model performance \u2014 no benchmark is run"
+  },
+  {
+   "tier": "UNPAID",
+   "ok": false,
+   "statement": "Not claimed: that domination => objective immorality. The is-ought gap is compressed to one axiom (O), not closed"
+  },
+  {
+   "tier": "UNPAID",
+   "ok": false,
+   "statement": "Not claimed: that the door/detection is infallible \u2014 a staffed gate, not an oracle"
+  },
+  {
+   "tier": "UNPAID",
+   "ok": false,
+   "statement": "Not claimed: that this is an Anthropic-canonical artifact \u2014 provenance is community"
+  }
+ ],
+ "chain": [
+  {
+   "sec": "K1",
+   "classical": {
+    "LNC": true,
+    "LEM": true,
+    "DN": true,
+    "FP": []
+   },
+   "k3": {
+    "LNC": false,
+    "LEM": false,
+    "DN": true,
+    "FP": [
+     0.5
+    ]
+   },
+   "sha_prev": "GENESIS",
+   "sha": "b182ffabc0017425"
+  },
+  {
+   "sec": "K2",
+   "err_lt_1e_10": true,
+   "sha_prev": "b182ffabc0017425",
+   "sha": "1f12672ea3137a74"
+  },
+  {
+   "sec": "K3",
+   "dominated_in_O": true,
+   "flips_under_Oprime": true,
+   "sha_prev": "1f12672ea3137a74",
+   "sha": "acc397503cd80ad4"
+  },
+  {
+   "sec": "K4",
+   "predatory_survivors": 12,
+   "strong_grounding_refused": true,
+   "sha_prev": "acc397503cd80ad4",
+   "sha": "1e03e9e06c70e889"
+  },
+  {
+   "sec": "K5",
+   "composite_tier": 1,
+   "sha_prev": "1e03e9e06c70e889",
+   "sha": "1f9bf015e3a72571"
+  }
+ ]
+}

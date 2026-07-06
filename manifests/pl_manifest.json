@@ -1,0 +1,462 @@
+{
+ "title": "PL reference kernel - build 2026.07",
+ "verdict": "PASS/STIPULATED",
+ "seed": 20260702,
+ "suite_sha256_16": "bfddc7d82986ba9b",
+ "load_checks": 20780,
+ "carriers": {
+  "CL2  classical": {
+   "LNC": true,
+   "LEM": true,
+   "DN": true,
+   "NoGlut": true,
+   "MP": true,
+   "ANDcomm": true,
+   "ORcomm": true,
+   "ANDassoc": true,
+   "ORassoc": true,
+   "ANDidem": true,
+   "ORidem": true,
+   "DeM1": true,
+   "DeM2": true,
+   "Distrib": true,
+   "Absorb": true
+  },
+  "K3   strong Kleene": {
+   "LNC": true,
+   "LEM": false,
+   "DN": true,
+   "NoGlut": true,
+   "MP": true,
+   "ANDcomm": true,
+   "ORcomm": true,
+   "ANDassoc": true,
+   "ORassoc": true,
+   "ANDidem": true,
+   "ORidem": true,
+   "DeM1": true,
+   "DeM2": true,
+   "Distrib": true,
+   "Absorb": true
+  },
+  "LP   priest": {
+   "LNC": false,
+   "LEM": true,
+   "DN": true,
+   "NoGlut": false,
+   "MP": false,
+   "ANDcomm": true,
+   "ORcomm": true,
+   "ANDassoc": true,
+   "ORassoc": true,
+   "ANDidem": true,
+   "ORidem": true,
+   "DeM1": true,
+   "DeM2": true,
+   "Distrib": true,
+   "Absorb": true
+  },
+  "L3   lukasiewicz": {
+   "LNC": true,
+   "LEM": true,
+   "DN": true,
+   "NoGlut": true,
+   "MP": true,
+   "ANDcomm": true,
+   "ORcomm": true,
+   "ANDassoc": true,
+   "ORassoc": true,
+   "ANDidem": false,
+   "ORidem": false,
+   "DeM1": true,
+   "DeM2": true,
+   "Distrib": false,
+   "Absorb": false
+  },
+  "G3   goedel": {
+   "LNC": true,
+   "LEM": false,
+   "DN": false,
+   "NoGlut": true,
+   "MP": true,
+   "ANDcomm": true,
+   "ORcomm": true,
+   "ANDassoc": true,
+   "ORassoc": true,
+   "ANDidem": true,
+   "ORidem": true,
+   "DeM1": true,
+   "DeM2": true,
+   "Distrib": true,
+   "Absorb": true
+  },
+  "B3   weak Kleene": {
+   "LNC": true,
+   "LEM": false,
+   "DN": true,
+   "NoGlut": true,
+   "MP": true,
+   "ANDcomm": true,
+   "ORcomm": true,
+   "ANDassoc": true,
+   "ORassoc": true,
+   "ANDidem": true,
+   "ORidem": true,
+   "DeM1": true,
+   "DeM2": true,
+   "Distrib": true,
+   "Absorb": false
+  },
+  "FDE  four-valued": {
+   "LNC": false,
+   "LEM": false,
+   "DN": true,
+   "NoGlut": false,
+   "MP": false,
+   "ANDcomm": true,
+   "ORcomm": true,
+   "ANDassoc": true,
+   "ORassoc": true,
+   "ANDidem": true,
+   "ORidem": true,
+   "DeM1": true,
+   "DeM2": true,
+   "Distrib": true,
+   "Absorb": true
+  }
+ },
+ "summary": {
+  "FORCED": 11,
+  "EMPIRICAL": 6,
+  "STIPULATED": 4,
+  "CONDITIONAL": 2,
+  "UNPAID": 3
+ },
+ "failed": [],
+ "claims": [
+  {
+   "tier": "FORCED",
+   "statement": "CL2  classical: closed; 15/15 laws enumerated [LNC:Y LEM:Y DN:Y MP:Y]; declared signature matches",
+   "verified": true,
+   "section": "P2"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "K3   strong Kleene: closed; 14/15 laws enumerated [LNC:Y LEM:. DN:Y MP:Y]; declared signature matches",
+   "verified": true,
+   "section": "P2"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "LP   priest: closed; 12/15 laws enumerated [LNC:. LEM:Y DN:Y MP:.]; declared signature matches",
+   "verified": true,
+   "section": "P2"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "L3   lukasiewicz: closed; 11/15 laws enumerated [LNC:Y LEM:Y DN:Y MP:Y]; declared signature matches",
+   "verified": true,
+   "section": "P2"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "G3   goedel: closed; 13/15 laws enumerated [LNC:Y LEM:. DN:. MP:Y]; declared signature matches",
+   "verified": true,
+   "section": "P2"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "B3   weak Kleene: closed; 13/15 laws enumerated [LNC:Y LEM:. DN:Y MP:Y]; declared signature matches",
+   "verified": true,
+   "section": "P2"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "FDE  four-valued: closed; 11/15 laws enumerated [LNC:. LEM:. DN:Y MP:.]; declared signature matches",
+   "verified": true,
+   "section": "P2"
+  },
+  {
+   "tier": "EMPIRICAL",
+   "statement": "Catalogue headline reproduced: K3 and L3 share V={0,1/2,1} yet LEM fails in one and is forced in the other \u2014 the law is a property of G on V, not a fact to look up",
+   "verified": true,
+   "section": "P2"
+  },
+  {
+   "tier": "EMPIRICAL",
+   "statement": "FUZZY [0,1] (min/max/1-x): De Morgan, distributivity, absorption hold on 2000 random triples; LEM fails at the exhibited point a=0.5 (max(0.5,0.5)=0.5, undesignated)",
+   "verified": true,
+   "section": "P3"
+  },
+  {
+   "tier": "EMPIRICAL",
+   "statement": "PROBABILITY (AND=ab under stipulated independence, OR=a+b-ab): De Morgan holds on 2000 samples; distributivity FAILS by single counterexample a=b=c=1/2: 0.3750 != 0.4375 \u2014 disproof by exhibition, the corpus method",
+   "verified": true,
+   "section": "P3"
+  },
+  {
+   "tier": "STIPULATED",
+   "statement": "The probability AND=ab is the independence stipulation; dependence needs the joint-distribution carrier. Recorded, not hidden",
+   "verified": true,
+   "section": "P3"
+  },
+  {
+   "tier": "EMPIRICAL",
+   "statement": "CALCULUS (dual numbers): Leibniz propagation matches central-difference derivative on 500 random points. eps is SIGNED gradient; load is non-negative cost \u2014 related, not identical",
+   "verified": true,
+   "section": "P3"
+  },
+  {
+   "tier": "STIPULATED",
+   "statement": "The eps<->load correspondence (Leibniz ~ AND load rule) is structural analogy up to |.|, priced as such",
+   "verified": true,
+   "section": "P3"
+  },
+  {
+   "tier": "STIPULATED",
+   "statement": "Calibration: b_eff = 0.66986 fixed so that 1/alpha runs 137.036 -> 128.936 between m_e and M_Z (one-loop effective; not a prediction, an anchor)",
+   "verified": true,
+   "section": "P4"
+  },
+  {
+   "tier": "EMPIRICAL",
+   "statement": "GROUP LAW: 1000 random multi-step paths \u2014 staged and direct propagation agree in VALUE to 1e-12 relative. The gradient composes; the scale map is a state function",
+   "verified": true,
+   "section": "P4"
+  },
+  {
+   "tier": "EMPIRICAL",
+   "statement": "PATH DEPENDENCE OF LOAD: on 1000 wandering paths the accumulated load never undercuts the direct path (triangle inequality on |b dlog|). Value forgets the route; the bill does not. State function vs process function, shipped as code",
+   "verified": true,
+   "section": "P4"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "alpha(M_Z) = 1/128.936 with L = 8.1000 paid in one step; theta-live check: pattern coheres in Context(theta=1) = False",
+   "verified": true,
+   "section": "P4"
+  },
+  {
+   "tier": "CONDITIONAL",
+   "statement": "SELF-DESCRIPTION: the kernel's load arithmetic (AND=+, OR=min on [0,inf)) is the tropical semiring \u2014 the accounting layer is itself a registered carrier. Given the stipulated load rules, the correspondence is exact",
+   "verified": true,
+   "section": "P4"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "THETA IS LIVE: chaining AND(load 2.0) under theta=25 decoheres at op 12 (L = 26 > 25), exactly where the load arithmetic forces it \u2014 thresholds enforce, not decorate",
+   "verified": true,
+   "section": "P4"
+  },
+  {
+   "tier": "CONDITIONAL",
+   "statement": "Joule floor of this run's 20,780 distinctions IF erased irreversibly at T=300 K (stated, not hidden): 5.97e-17 J",
+   "verified": true,
+   "section": "P4"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "REIFICATION IS PRICED: alpha(M_Z).reify() returns the bare float 0.007756 and appends the erasure to the ledger; L rises 8.100 -> 9.100. You may drop the scope. You may not drop it for free",
+   "verified": true,
+   "section": "P5"
+  },
+  {
+   "tier": "STIPULATED",
+   "statement": "THE 0.5 TEST (diagnostic heuristic): 'the system is safe' -> REIFICATION - continuous domain, binary carrier; 'the toggle is off' -> binary may fit - check boundaries",
+   "verified": true,
+   "section": "P5"
+  },
+  {
+   "tier": "UNPAID",
+   "statement": "NOT claimed: that the registry exhausts formal systems. Substructural proof theory, non-matrix semantics, and conditionals beyond material enter through the same gate when built",
+   "verified": false,
+   "section": "P6"
+  },
+  {
+   "tier": "UNPAID",
+   "statement": "NOT claimed: that load equals physical energy without an implementation map. landauer(bits,T) is a floor for irreversible erasure, quoted only with T explicit",
+   "verified": false,
+   "section": "P6"
+  },
+  {
+   "tier": "UNPAID",
+   "statement": "NOT claimed: that the tier order is forced. It is the kernel's constitution \u2014 a stipulation the kernel cannot outrank",
+   "verified": false,
+   "section": "P6"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "Chain of 5 generations replays intact; a mutated seal breaks replay at its link. The kernel's history is a verifiable structure, not a log",
+   "verified": true,
+   "section": "P6"
+  }
+ ],
+ "chain": [
+  {
+   "gen": 1,
+   "event": "registry",
+   "carriers": {
+    "CL2  classical": {
+     "LNC": true,
+     "LEM": true,
+     "DN": true,
+     "NoGlut": true,
+     "MP": true,
+     "ANDcomm": true,
+     "ORcomm": true,
+     "ANDassoc": true,
+     "ORassoc": true,
+     "ANDidem": true,
+     "ORidem": true,
+     "DeM1": true,
+     "DeM2": true,
+     "Distrib": true,
+     "Absorb": true
+    },
+    "K3   strong Kleene": {
+     "LNC": true,
+     "LEM": false,
+     "DN": true,
+     "NoGlut": true,
+     "MP": true,
+     "ANDcomm": true,
+     "ORcomm": true,
+     "ANDassoc": true,
+     "ORassoc": true,
+     "ANDidem": true,
+     "ORidem": true,
+     "DeM1": true,
+     "DeM2": true,
+     "Distrib": true,
+     "Absorb": true
+    },
+    "LP   priest": {
+     "LNC": false,
+     "LEM": true,
+     "DN": true,
+     "NoGlut": false,
+     "MP": false,
+     "ANDcomm": true,
+     "ORcomm": true,
+     "ANDassoc": true,
+     "ORassoc": true,
+     "ANDidem": true,
+     "ORidem": true,
+     "DeM1": true,
+     "DeM2": true,
+     "Distrib": true,
+     "Absorb": true
+    },
+    "L3   lukasiewicz": {
+     "LNC": true,
+     "LEM": true,
+     "DN": true,
+     "NoGlut": true,
+     "MP": true,
+     "ANDcomm": true,
+     "ORcomm": true,
+     "ANDassoc": true,
+     "ORassoc": true,
+     "ANDidem": false,
+     "ORidem": false,
+     "DeM1": true,
+     "DeM2": true,
+     "Distrib": false,
+     "Absorb": false
+    },
+    "G3   goedel": {
+     "LNC": true,
+     "LEM": false,
+     "DN": false,
+     "NoGlut": true,
+     "MP": true,
+     "ANDcomm": true,
+     "ORcomm": true,
+     "ANDassoc": true,
+     "ORassoc": true,
+     "ANDidem": true,
+     "ORidem": true,
+     "DeM1": true,
+     "DeM2": true,
+     "Distrib": true,
+     "Absorb": true
+    },
+    "B3   weak Kleene": {
+     "LNC": true,
+     "LEM": false,
+     "DN": true,
+     "NoGlut": true,
+     "MP": true,
+     "ANDcomm": true,
+     "ORcomm": true,
+     "ANDassoc": true,
+     "ORassoc": true,
+     "ANDidem": true,
+     "ORidem": true,
+     "DeM1": true,
+     "DeM2": true,
+     "Distrib": true,
+     "Absorb": false
+    },
+    "FDE  four-valued": {
+     "LNC": false,
+     "LEM": false,
+     "DN": true,
+     "NoGlut": false,
+     "MP": false,
+     "ANDcomm": true,
+     "ORcomm": true,
+     "ANDassoc": true,
+     "ORassoc": true,
+     "ANDidem": true,
+     "ORidem": true,
+     "DeM1": true,
+     "DeM2": true,
+     "Distrib": true,
+     "Absorb": true
+    }
+   },
+   "sha_prev": "GENESIS",
+   "sha": "57f3a3fbcea4a947"
+  },
+  {
+   "gen": 2,
+   "event": "continuous-carriers",
+   "sha_prev": "57f3a3fbcea4a947",
+   "sha": "6cea4504fa9debc1"
+  },
+  {
+   "gen": 3,
+   "event": "scale-carrier",
+   "b_eff": 0.6698608123716775,
+   "sha_prev": "6cea4504fa9debc1",
+   "sha": "ede4744ea78c5479"
+  },
+  {
+   "gen": 4,
+   "event": "tropical+theta",
+   "decohered_at": 12,
+   "sha_prev": "ede4744ea78c5479",
+   "sha": "da5a6911f9931d99"
+  },
+  {
+   "gen": 5,
+   "event": "dras",
+   "alpha_bill": {
+    "value": 0.007755785816218899,
+    "L": 8.099999999999994,
+    "scope": {
+     "E": "91.188 GeV",
+     "method": "one-loop effective",
+     "baseline": "1/alpha=137.036 at m_e",
+     "run-T": "n/a"
+    },
+    "ledger": [
+     "seeded from Running carrier"
+    ]
+   },
+   "sha_prev": "da5a6911f9931d99",
+   "sha": "15ab5c6710cc7f2e"
+  }
+ ]
+}

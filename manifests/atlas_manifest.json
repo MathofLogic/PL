@@ -1,0 +1,196 @@
+{
+ "title": "ATLAS-3 \u2014 the conservative three-valued carrier space",
+ "space": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling",
+ "signatures_realized": 2994,
+ "verdict": "PASS/STIPULATED",
+ "load_checks": 7923327,
+ "suite_sha256_16": "ab59172abd6618cb",
+ "summary": {
+  "FORCED": 12,
+  "STIPULATED": 1,
+  "EMPIRICAL": 1,
+  "CONDITIONAL": 1,
+  "UNPAID": 2
+ },
+ "failed": [],
+ "claims": [
+  {
+   "tier": "FORCED",
+   "statement": "Space audit: 354294 carriers = 3 NOT x 243 AND x 243 OR x 2 D; every table closed over V; census total equals space size exactly",
+   "verified": true,
+   "section": "A1",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "STIPULATED",
+   "statement": "The scope is a choice: conservative (classical on {0,1}), matrix semantics, these 15 laws. Post's cyclic negation is OUTSIDE it (not conservative). Theorems below are forced WITHIN the scope; the scope is not forced",
+   "verified": true,
+   "section": "A1",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "EMPIRICAL",
+   "statement": "Cross-check vs corpus (carrier_verify.py / catalogue): K3 fails LEM; L3 forces LEM (same V, different G \u2014 the headline claim); LP fails LNC but keeps LEM; G3 keeps LNC, drops LEM. All reproduced independently by this enumeration",
+   "verified": true,
+   "section": "A2",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "Of 2^15 = 32768 conceivable law-signatures, exactly 2994 are realized (9.1%). The space of logics is a thin shell: 90.9% of law-combinations correspond to NO carrier",
+   "verified": true,
+   "section": "A3",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "THE PERFECT MIMIC: carriers satisfying ALL 15 laws: 0. Maximum laws simultaneously satisfiable: 14/15 (achieved by 4 carriers). Missing from the best: ['DN']",
+   "verified": true,
+   "section": "A3",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "No pairwise impossibilities: every PAIR of the 15 laws is jointly realizable somewhere in the space. Trade-offs in 3-valued logic are higher-order \u2014 pairs never exclude, but full conjunction may (see mimic count)",
+   "verified": true,
+   "section": "A4",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "FORCING: Absorb -> ANDidem holds in ALL 2016 carriers satisfying Absorb (zero counterexamples in the space)",
+   "verified": true,
+   "section": "A4",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "FORCING: Absorb -> ORidem holds in ALL 2016 carriers satisfying Absorb (zero counterexamples in the space)",
+   "verified": true,
+   "section": "A4",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "CLASSICALITY RECOVERY: 78732 carriers satisfy LNC and LEM simultaneously (the two laws 3-valued logic is said to trade). Laws held by ALL of them: ['LNC', 'LEM'] \u2014 laws held by NONE: []",
+   "verified": true,
+   "section": "A4",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "THE SACRIFICE THEOREM: no carrier satisfies all 15 laws, so every 3-valued logic pays. At the 14/15 frontier only ['DN', 'LEM'] can be the LONE sacrifice (DN: 4 carriers, LEM: 1 carriers). The other 13 laws can never fall alone \u2014 breaking any of them necessarily breaks something else",
+   "verified": true,
+   "section": "A4",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "K3 EXTREMALITY (discovered): strong Kleene is the UNIQUE carrier among all 354294 that reaches 14/15 with LEM as the lone sacrifice. The catalogue lists K3 as one logic among many; the atlas shows it is an extremal point of the whole space",
+   "verified": true,
+   "section": "A4",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "GRANULARITY OF OBSTRUCTION: every pair AND every triple of laws is jointly realizable; only larger conjunctions become impossible. The trade-offs of 3-valued logic are global, not local \u2014 no two or three laws exclude each other, yet all 15 cannot coexist",
+   "verified": true,
+   "section": "A4",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "Constructive witness: NOT(1/2)=0, D={1/2,1} \u2014 LNC+LEM coexist by paying with a non-classical connective cell, not by magic",
+   "verified": true,
+   "section": "A4",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "CONDITIONAL",
+   "statement": "Enumeration load: 7,923,327 primitive checks performed. Landauer floor IF erased irreversibly AT T=300K (stipulated, not measured): 2.27e-14 J \u2014 temperature stated because a bare Landauer constant is itself a reification",
+   "verified": true,
+   "section": "A5",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "UNPAID",
+   "statement": "NOT claimed: that this space contains all 3-valued logics. Non-conservative negations (Post cycles), non-matrix semantics (sequent calculi with structural-rule control), and conditionals beyond material (L3's own ->) are outside scope",
+   "verified": false,
+   "section": "A5",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "UNPAID",
+   "statement": "NOT claimed: that law-signatures individuate logics. RM3 and LP share a signature here because they differ in the conditional, which this scope prices as material",
+   "verified": false,
+   "section": "A5",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  },
+  {
+   "tier": "FORCED",
+   "statement": "Chain of 4 generations replays intact; mutating a sealed generation breaks replay \u2014 the atlas's loaded history is a verifiable structure",
+   "verified": true,
+   "section": "A5",
+   "scope": "conservative 3-valued matrix carriers, V={0,1/2,1}, |space|=354294, exhaustively enumerated, no sampling"
+  }
+ ],
+ "chain": [
+  {
+   "gen": 1,
+   "event": "space-audit",
+   "size": 354294,
+   "signatures_realized": 2994,
+   "sha_prev": "GENESIS",
+   "sha": "f30794cec8dca73c"
+  },
+  {
+   "gen": 2,
+   "event": "named-location",
+   "signatures": {
+    "K3 (strong Kleene)": "0x7ffd",
+    "LP (=RM3 frag., paracons.)": "0x7fe6",
+    "L3 (Lukasiewicz, strong)": "0x1b7f",
+    "G3 (Goedel/intuitionistic)": "0x7ff9",
+    "B3 (weak Kleene/Bochvar)": "0x3ffd"
+   },
+   "sha_prev": "f30794cec8dca73c",
+   "sha": "a86a1ab4dd21700b"
+  },
+  {
+   "gen": 3,
+   "event": "census",
+   "signatures": 2994,
+   "max_laws": 14,
+   "best_exemplar": [
+    0,
+    13,
+    125,
+    1
+   ],
+   "sha_prev": "a86a1ab4dd21700b",
+   "sha": "d0271406c75ecf86"
+  },
+  {
+   "gen": 4,
+   "event": "mining",
+   "impossibilities": [],
+   "sacrifice": {
+    "DN": 4,
+    "LEM": 1
+   },
+   "forcings": [
+    [
+     "Absorb",
+     "ANDidem"
+    ],
+    [
+     "Absorb",
+     "ORidem"
+    ]
+   ],
+   "lnc_lem_carriers": 78732,
+   "sha_prev": "d0271406c75ecf86",
+   "sha": "d68ef4bfe133e17a"
+  }
+ ]
+}

@@ -1,0 +1,333 @@
+{
+  "claims": [
+    {
+      "id": "test_1_1",
+      "tier": "FORCED",
+      "statement": "In {0,0.5,1} with rule 'designated iff v>0', exactly {0.5,1} are designated",
+      "verified": true
+    },
+    {
+      "id": "test_1_2",
+      "tier": "FORCED",
+      "statement": "A one-element carrier makes every statement evaluate identically (trivial logic)",
+      "verified": true
+    },
+    {
+      "id": "test_2_1",
+      "tier": "FORCED",
+      "statement": "On {0,1}: AND=product and AND=min produce the SAME table; so does OR=max",
+      "verified": true
+    },
+    {
+      "id": "test_2_2",
+      "tier": "FORCED",
+      "statement": "On {0,0.5,1} the two ANDs DIFFER: product(0.5,0.5)=0.25, min(0.5,0.5)=0.5 \u2014 choice exposed",
+      "verified": true
+    },
+    {
+      "id": "test_2_3",
+      "tier": "FORCED",
+      "statement": "A->B := OR(NOT A, B) is 0 only at (1,0) on {0,1} \u2014 implication is derivable",
+      "verified": true
+    },
+    {
+      "id": "test_2_4",
+      "tier": "FORCED",
+      "statement": "OR := a+b violates closure on {0,1}: 1+1=2 is outside the carrier",
+      "verified": true
+    },
+    {
+      "id": "test_3_0",
+      "tier": "FORCED",
+      "statement": "TRAP SPRUNG: {0,0.5,1} with product-AND leaks: AND(0.5,0.5)=0.25 is not in V",
+      "verified": true
+    },
+    {
+      "id": "test_3_1",
+      "tier": "FORCED",
+      "statement": "REPAIR: Kleene K3 ({0,0.5,1}, 1-v, min, max) passes the closure audit",
+      "verified": true
+    },
+    {
+      "id": "test_3_2",
+      "tier": "FORCED",
+      "statement": "{0,1}: LNC, LEM, DN all hold \u2014 checked by complete enumeration, not assumed",
+      "verified": true
+    },
+    {
+      "id": "test_3_3",
+      "tier": "FORCED",
+      "statement": "{0,0.5,1} (K3): LNC fails at 0.5 (min=0.5), LEM fails at 0.5 (max=0.5), DN survives",
+      "verified": true
+    },
+    {
+      "id": "test_3_4",
+      "tier": "FORCED",
+      "statement": "[0,1] sampled at 101 points: LNC and LEM fail at every interior point; DN survives",
+      "verified": true
+    },
+    {
+      "id": "test_3_5",
+      "tier": "FORCED",
+      "statement": "DN = pure algebra of NOT(v)=1-v: 1-(1-v)=v, robust to any carrier using that NOT",
+      "verified": true
+    },
+    {
+      "id": "test_3_6",
+      "tier": "FORCED",
+      "statement": "Independence: with NOT(v):=0 on {0,1}, LNC holds but DN fails at v=1",
+      "verified": true
+    },
+    {
+      "id": "test_4_1",
+      "tier": "FORCED",
+      "statement": "Knob V: identical (G) on {0,1} vs {0,0.5,1} flips LNC/LEM; DN unmoved",
+      "verified": true
+    },
+    {
+      "id": "test_4_2",
+      "tier": "FORCED",
+      "statement": "Knob G: with OR removed, the statement of LEM cannot even be formed (unreachable)",
+      "verified": true
+    },
+    {
+      "id": "test_4_3",
+      "tier": "FORCED",
+      "statement": "Knob theta: coherent set at theta=0.5 is a subset of the set at theta=2.0",
+      "verified": true
+    },
+    {
+      "id": "test_5_1",
+      "tier": "EMPIRICAL",
+      "statement": "Landauer limit kB*T*ln2 at 300K = 2.871e-21 J/bit (Landauer 1961; measured to ~2%, Berut et al. 2012)",
+      "verified": true
+    },
+    {
+      "id": "test_5_2",
+      "tier": "STIPULATED",
+      "statement": "Load rules (one chosen G): NOT keeps L, AND adds (4+5=9), OR takes min (3)",
+      "verified": true
+    },
+    {
+      "id": "test_5_3",
+      "tier": "FORCED",
+      "statement": "Alternatives exist: a max-cost AND is also closed and monotone \u2014 load rules are choices",
+      "verified": true
+    },
+    {
+      "id": "test_5_4",
+      "tier": "STIPULATED",
+      "statement": "Generalised AND load LP+LQ-I: I=0 pays full price; I=LP makes Q free given P",
+      "verified": true
+    },
+    {
+      "id": "test_5_5",
+      "tier": "FORCED",
+      "statement": "Chained ANDs of load 2.0: after 7 ops L=16<=25 coheres; failure would begin at op 12",
+      "verified": true
+    },
+    {
+      "id": "test_5_6",
+      "tier": "STIPULATED",
+      "statement": "Load spectrum extension (tautology L<0, contradiction L=-inf) is a design proposal",
+      "verified": true
+    },
+    {
+      "id": "test_6_1",
+      "tier": "STIPULATED",
+      "statement": "0.5 test: meaningful midpoint -> continuous domain wearing a binary carrier",
+      "verified": true
+    },
+    {
+      "id": "test_6_2",
+      "tier": "FORCED",
+      "statement": "Galilean velocity addition error = v1*v2/c^2: 1.0e-06 at 0.001c, 0.25 at 0.5c, 0.81 at 0.9c \u2014 Newton's hidden theta, computed",
+      "verified": true
+    },
+    {
+      "id": "test_6_3",
+      "tier": "ANALOGY",
+      "statement": "'Einstein found Newton's theta' \u2014 reading scientific revision as threshold-discovery; the numbers above are forced, the framing is a chosen map",
+      "verified": true
+    },
+    {
+      "id": "test_7_1",
+      "tier": "FORCED",
+      "statement": "Mode 1 (Liar): v=NOT(v) has no solution in {0,1}; exactly one (0.5) in {0,0.5,1}",
+      "verified": true
+    },
+    {
+      "id": "test_7_1b",
+      "tier": "STIPULATED",
+      "statement": "Calling 0.5 a 'resolution' is carrier-relative: K3 assigns the Liar the middle value; whether natural language IS that carrier is a modelling choice",
+      "verified": true
+    },
+    {
+      "id": "test_7_2",
+      "tier": "FORCED",
+      "statement": "Mode 2 arithmetic: for any theta there is n with 2^n > theta (theta=10^9 -> n=30)",
+      "verified": true
+    },
+    {
+      "id": "test_7_2b",
+      "tier": "ANALOGY",
+      "statement": "Reading Goedel/Turing as Mode 2 is a model: the actual theorems say NO in-system proof exists at ANY cost; 'infinite load' is the PL picture of that, not the proof",
+      "verified": true
+    },
+    {
+      "id": "test_7_3",
+      "tier": "FORCED",
+      "statement": "Mode 3 (Russell): asking 'R in R?' under R={x: x not in x} drives the evaluator into unbounded self-call \u2014 RecursionError, demonstrated, not narrated",
+      "verified": true
+    },
+    {
+      "id": "test_7_4",
+      "tier": "FORCED",
+      "statement": "Mode 4 (Yablo): every finite truncation n=2..8 has EXACTLY ONE model \u2014 all false except the LAST sentence. The seed is always at the end; infinity has no end",
+      "verified": true
+    },
+    {
+      "id": "test_8_1",
+      "tier": "FORCED",
+      "statement": "Dual-number carrier: output load = EXACT derivative; product rule emerges from the combination rule (checked at 5 points against the analytic derivative)",
+      "verified": true
+    },
+    {
+      "id": "test_8_2",
+      "tier": "FORCED",
+      "statement": "But this is a DIFFERENT gradient family from Chapter 5: additive AND-load gives L=2 for two unit loads; Leibniz combination on values (3,1),(4,1) gives L=7",
+      "verified": true
+    },
+    {
+      "id": "test_8_3",
+      "tier": "FORCED",
+      "statement": "P(A or B) = P(A)+P(B) ONLY for disjoint events; in general subtract P(A and B) (inclusion-exclusion, verified by enumerating a 12-point sample space)",
+      "verified": true
+    },
+    {
+      "id": "test_8_4",
+      "tier": "FORCED",
+      "statement": "Entropy-as-load: fair coin 1.000 bit > biased(0.9) 0.469 bit > certain 0.000 bit",
+      "verified": true
+    },
+    {
+      "id": "test_8_5",
+      "tier": "STIPULATED",
+      "statement": "World-logic sketches (catuskoti, Taoist, Ubuntu) are PL models built to honour those traditions' design pressures \u2014 carrier proposals, not anthropology",
+      "verified": true
+    },
+    {
+      "id": "test_8_6",
+      "tier": "FORCED",
+      "statement": "A four-valued carrier (Belnap FOUR) is closed and: LNC fails at B='both', LEM fails at N='neither' \u2014 four corners, forced by the carrier",
+      "verified": true
+    },
+    {
+      "id": "test_9_1",
+      "tier": "FORCED",
+      "statement": "Closure + identity: every generator is a bijection of slots; solved state exists",
+      "verified": true
+    },
+    {
+      "id": "test_9_2",
+      "tier": "FORCED",
+      "statement": "G^4 = identity: each quarter turn applied 4 times returns every sticker home",
+      "verified": true
+    },
+    {
+      "id": "test_9_3",
+      "tier": "FORCED",
+      "statement": "Half-turn is its own inverse: (G^2)^2 = identity \u2014 Double Negation in plastic",
+      "verified": true
+    },
+    {
+      "id": "test_9_4",
+      "tier": "FORCED",
+      "statement": "Non-commutativity: U then R differs from R then U (compared sticker by sticker)",
+      "verified": true
+    },
+    {
+      "id": "test_9_5",
+      "tier": "FORCED",
+      "statement": "Inverses exist: G^3 undoes G for every quarter turn (G^3 . G = identity)",
+      "verified": true
+    },
+    {
+      "id": "test_9_6",
+      "tier": "FORCED",
+      "statement": "Corner-twist sum mod 3 is move-invariant (moves are FIXED slot permutations; checked across 401 states x 3 generators = 1203 applications, all preserved)",
+      "verified": true
+    },
+    {
+      "id": "test_9_7",
+      "tier": "FORCED",
+      "statement": "Twist one corner by hand: invariant jumps to 1 (mod 3). Since every legal move preserves it and solved has 0, NO sequence of legal moves ever solves this state",
+      "verified": true
+    },
+    {
+      "id": "test_9_8",
+      "tier": "FORCED",
+      "statement": "Bounded search agrees: 289896 distinct legal states reached within 7 moves (any face, any amount) \u2014 the twisted state is not among them",
+      "verified": true
+    },
+    {
+      "id": "test_9_9",
+      "tier": "EMPIRICAL",
+      "statement": "God's number for the 3x3x3 is 20 in the half-turn metric \u2014 established by exhaustive computation (Rokicki, Kociemba, Davidson, Dethridge, 2010)",
+      "verified": true
+    },
+    {
+      "id": "test_10_1",
+      "tier": "FORCED",
+      "statement": "Sorites: each step is 0.999999 true; the MILLION-step conjunction has truth 0.368 ~ 1/e. A heap of almost-certainties is not a certainty",
+      "verified": true
+    },
+    {
+      "id": "test_10_2",
+      "tier": "ANALOGY",
+      "statement": "Reading sentences as P/G->Q (subject/predicate/value) and grammar as a gradient family is a modelling lens on language, useful and chosen \u2014 not a theorem",
+      "verified": true
+    },
+    {
+      "id": "test_11_1",
+      "tier": "FORCED",
+      "statement": "Carrier class reproduces every Chapter 3 result; AND it catches the product-AND trap failing the closure audit \u2014 the tool audits the book",
+      "verified": true
+    },
+    {
+      "id": "test_11_2",
+      "tier": "FORCED",
+      "statement": "compare(): classical vs K3 differ exactly on LNC and LEM; agree on closure, DN",
+      "verified": true
+    },
+    {
+      "id": "test_12_1",
+      "tier": "STIPULATED",
+      "statement": "Starter D(a,b)=|a-b|/range: D(0,1)=1, D(0.49,0.51)=0.02 on [0,1] \u2014 note it makes NEARBY values CHEAP to distinguish, the opposite of the preface's intuition. First open problem: build a D where near-boundary distinctions cost MORE",
+      "verified": true
+    }
+  ],
+  "traps_declined": [
+    {
+      "tempting_claim": "Tempting overclaim: 'Once you choose your carrier, the formulas for the operations are forced.'",
+      "why": "False: product-AND and min-AND share {0,1} but split on {0,0.5,1}. Operations are a second choice (the gradient family G). The project's own Carrier Catalogue lists three fuzzy ANDs."
+    },
+    {
+      "tempting_claim": "Tempting overclaim: central three-valued example used V={0,0.5,1} with AND=multiply while Exercise 2.4 demanded closure.",
+      "why": "The Chapter 2 closure rule, applied to this carrier, fails. Use AND=min (Kleene K3). The teaching points all survive the swap."
+    },
+    {
+      "tempting_claim": "Tempting overclaim: 'The Fundamental Theorem of Calculus is Double Negation in the calculus carrier. Not an analogy.'",
+      "why": "Unverifiable as stated and false on the obvious reading: DN is NOT(NOT(v))=v for NOT=1-v; FTC relates integral and derivative. No construction was given under which they coincide. Withdrawn until someone builds and verifies one."
+    },
+    {
+      "tempting_claim": "Tempting overclaim: 'P(A or B) = P(A) + P(B) \u2014 from the normalisation constraint.'",
+      "why": "Holds only for mutually exclusive events; stated without the condition. Repaired to inclusion-exclusion, verified above."
+    },
+    {
+      "tempting_claim": "Tempting overclaim: 'theta = 20. The physical object enforces theta. You cannot exceed it.'",
+      "why": "Conflates move-count with distance. You can make a million moves; what is true is that every state lies within distance 20 of solved (3x3, HTM). God's number is the diameter, an EMPIRICAL result, and calling it theta is a stipulated reading."
+    }
+  ],
+  "verdict": "PASS/STIPULATED"
+}
