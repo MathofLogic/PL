@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+# manifests regenerate at repo root when suites are run there;
+# the committed seals live in manifests/
+/pl_manifest.json
+/atlas_manifest.json
+/pl_guide_audit_manifest.json
+/workbook_manifest.json

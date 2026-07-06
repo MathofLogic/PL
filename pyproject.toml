@@ -1,0 +1,7 @@
+[project]
+name = "propagation-logic"
+version = "2026.7"
+description = "Propagation Logic: the MathofLogic core framework — one mechanism, verified carriers, the three-valued atlas, DRAS. Running a file is its audit."
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []                 # stdlib only, by design
