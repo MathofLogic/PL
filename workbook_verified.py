@@ -679,8 +679,30 @@ print(  "                    (load rules, tier order, the 0.5 test, D itself),")
 print(  "                    so no honest verdict on it can outrank STIPULATED.")
 print(  "                    A map that graded itself FORCED would be lying.")
 
+# seal the book's own history: section-by-section, GENESIS-linked,
+# replayable without the writer — the same discipline as its siblings
+import hashlib as _hl
+CHAIN = []
+def _seal(body):
+    prev = CHAIN[-1]["sha"] if CHAIN else "GENESIS"
+    sha = _hl.sha256((prev + json.dumps(body, sort_keys=True))
+                     .encode()).hexdigest()[:16]
+    CHAIN.append({**body, "sha_prev": prev, "sha": sha})
+_secs = {}
+for _c in MANIFEST:
+    _parts = str(_c.get("id", "")).split("_")
+    _key = f"ch_{_parts[1]}" if len(_parts) > 1 and \
+        _parts[1].isdigit() else "misc"
+    _secs.setdefault(_key, []).append(_c)
+for _name in sorted(_secs):
+    _cs = _secs[_name]
+    _seal({"section": _name, "claims": len(_cs),
+           "tiers": sorted({c["tier"] for c in _cs})})
+_seal({"event": "verdict", "verdict": f"PASS/{verdict_tier}",
+       "claims": len(MANIFEST), "traps_declined": len(TRAPS)})
+
 json.dump({"claims": MANIFEST, "traps_declined": TRAPS,
-           "verdict": f"PASS/{verdict_tier}"},
+           "verdict": f"PASS/{verdict_tier}", "chain": CHAIN},
           open("workbook_manifest.json", "w"), indent=2)
 print("\n  Manifest written to workbook_manifest.json")
 print("\nP / G -> Q. Calculemus — and check the receipt.")

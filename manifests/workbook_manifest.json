@@ -329,5 +329,132 @@
       "why": "Conflates move-count with distance. You can make a million moves; what is true is that every state lies within distance 20 of solved (3x3, HTM). God's number is the diameter, an EMPIRICAL result, and calling it theta is a stipulated reading."
     }
   ],
-  "verdict": "PASS/STIPULATED"
+  "verdict": "PASS/STIPULATED",
+  "chain": [
+    {
+      "section": "ch_1",
+      "claims": 2,
+      "tiers": [
+        "FORCED"
+      ],
+      "sha_prev": "GENESIS",
+      "sha": "934c2646cb2eb778"
+    },
+    {
+      "section": "ch_10",
+      "claims": 2,
+      "tiers": [
+        "ANALOGY",
+        "FORCED"
+      ],
+      "sha_prev": "934c2646cb2eb778",
+      "sha": "c785362e4e6a014f"
+    },
+    {
+      "section": "ch_11",
+      "claims": 2,
+      "tiers": [
+        "FORCED"
+      ],
+      "sha_prev": "c785362e4e6a014f",
+      "sha": "f6d09f828daf12bf"
+    },
+    {
+      "section": "ch_12",
+      "claims": 1,
+      "tiers": [
+        "STIPULATED"
+      ],
+      "sha_prev": "f6d09f828daf12bf",
+      "sha": "e06eb11a47f974ea"
+    },
+    {
+      "section": "ch_2",
+      "claims": 4,
+      "tiers": [
+        "FORCED"
+      ],
+      "sha_prev": "e06eb11a47f974ea",
+      "sha": "f4029ee0308e3dec"
+    },
+    {
+      "section": "ch_3",
+      "claims": 7,
+      "tiers": [
+        "FORCED"
+      ],
+      "sha_prev": "f4029ee0308e3dec",
+      "sha": "94182fc3d5948383"
+    },
+    {
+      "section": "ch_4",
+      "claims": 3,
+      "tiers": [
+        "FORCED"
+      ],
+      "sha_prev": "94182fc3d5948383",
+      "sha": "ecbe61b9cad88e26"
+    },
+    {
+      "section": "ch_5",
+      "claims": 6,
+      "tiers": [
+        "EMPIRICAL",
+        "FORCED",
+        "STIPULATED"
+      ],
+      "sha_prev": "ecbe61b9cad88e26",
+      "sha": "e97e4fc89507cc12"
+    },
+    {
+      "section": "ch_6",
+      "claims": 3,
+      "tiers": [
+        "ANALOGY",
+        "FORCED",
+        "STIPULATED"
+      ],
+      "sha_prev": "e97e4fc89507cc12",
+      "sha": "e5f6d39db9ec0ab7"
+    },
+    {
+      "section": "ch_7",
+      "claims": 6,
+      "tiers": [
+        "ANALOGY",
+        "FORCED",
+        "STIPULATED"
+      ],
+      "sha_prev": "e5f6d39db9ec0ab7",
+      "sha": "03edb6eefe5a10d1"
+    },
+    {
+      "section": "ch_8",
+      "claims": 6,
+      "tiers": [
+        "FORCED",
+        "STIPULATED"
+      ],
+      "sha_prev": "03edb6eefe5a10d1",
+      "sha": "5e798fa0e03cf085"
+    },
+    {
+      "section": "ch_9",
+      "claims": 9,
+      "tiers": [
+        "EMPIRICAL",
+        "FORCED"
+      ],
+      "sha_prev": "5e798fa0e03cf085",
+      "sha": "b347d5879caafd83"
+    },
+    {
+      "event": "verdict",
+      "verdict": "PASS/STIPULATED",
+      "claims": 51,
+      "traps_declined": 5,
+      "sha_prev": "b347d5879caafd83",
+      "sha": "a1851299b358b9f1"
+    }
+  ]
 }
