@@ -1,0 +1,6 @@
+{
+  "fast_gate": "carrier_verify.py",
+  "registry": {"import": ["pl_checks"], "attr": "pl_checks:CHECKS"},
+  "mutate": ["pl.py", "atlas3.py", "pl_guide_audit.py",
+             "workbook_verified.py", "pl_dras.py", "pl_checks.py"]
+}
